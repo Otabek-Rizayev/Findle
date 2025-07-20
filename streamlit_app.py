@@ -19,10 +19,7 @@ def load_data():
 
 profiles, profile_embeddings, model = load_data()
 st.title("Findle AI")
-st.write(
-    "Describe your needed Person!"
-)
-user_text = st.text_area("ABOUT", "QWE")
+user_text = st.text_area("Describe your needed Person!", "Agile product owner with software engineering background, experienced in digital transformation, DevOps, CI/CD, and leading cross-functional teams in enterprise or education domains")
 
 if st.button("DEEP RESEARCH 🔭"):
     if not user_text.strip():
@@ -36,10 +33,9 @@ if st.button("DEEP RESEARCH 🔭"):
         st.markdown("### Top 5 Similar Profiles:")
         for idx in top_idx: 
             st.markdown("---")
-            st.markdown(f"**Similarity Accuracy:** {cos_scores[idx]:.2f}")
-            st.markdown(f"**NAME:** {profiles[idx]['FirstName']} {profiles[idx]['LastName']}")
-            st.markdown(f"**ABOUT:** {profiles[idx]['About Me']}")
-            st.markdown(f"**EXPERIENCE:** {profiles[idx]['Experience']}")
-            st.markdown(f"**SKILLS:** {profiles[idx]['Skills']}")
-            st.markdown(f"**HEADLINE:** {profiles[idx]['Headline']}")
-
+            st.markdown(f"**Similarity Accuracy:** {cos_scores[idx]:.2f}",
+                        f"**NAME:** {profiles[idx]['FirstName']} {profiles[idx]['LastName']}",
+                        f"**ABOUT:** {profiles[idx]['About Me']}",
+                        f"**EXPERIENCE:** {profiles[idx]['Experience']}",
+                        f"**SKILLS:** {profiles[idx]['Skills']}",
+                        f"**HEADLINE:** {profiles[idx]['Headline']}")
