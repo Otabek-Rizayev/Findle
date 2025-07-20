@@ -34,10 +34,10 @@ if st.button("DEEP RESEARCH 🔭"):
         for idx in top_idx: 
             st.markdown("---")
             st.markdown(f"""
-                        **Similarity Accuracy:** {cos_scores[idx]:.2f}  
-                        **NAME:** {profiles[idx]['FirstName']} {profiles[idx]['LastName']}  
-                        **ABOUT:** {profiles[idx]['About Me']}  
-                        **EXPERIENCE:** {profiles[idx]['Experience']}  
-                        **SKILLS:** {profiles[idx]['Skills']}  
-                        **HEADLINE:** {profiles[idx]['Headline']}  
+                        **Similarity Accuracy:**   {cos_scores[idx]:.2f}  
+                        **NAME:**   {profiles[idx]['FirstName']} {profiles[idx]['LastName']}  
+                        **ABOUT:**   {profiles[idx]['About Me']}  
+                        **EXPERIENCE:**   {profiles[idx]['Experience']}  
+                        **SKILLS:**   {profiles[idx]['Skills']}  
+                        **HEADLINE:**   {profiles[idx]['Headline']}  
                         """)
